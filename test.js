@@ -3,11 +3,17 @@ var fs = require('fs'),
 
 var ModuleComplier = function() {
 
+    var debug = false;
+
     /**
      * ∑÷Œˆ“¿¿µ
      */
     var analyzeDepends = function(target, base) {
+        if(debug) {
+            console.log('start analyze %s\r', target);
+        }
         var caches = [];
+
 
         if(!path.existsSync(target)) {
             console.log('\'%s\' is not exists, ignore\r', target);
@@ -21,11 +27,13 @@ var ModuleComplier = function() {
             console.log('\'%s\' don\'t have depends, ignore\r', path.relative(base, target));
             return;
         }
-
         //string to json
         requires = eval(requires[0]);
 
-//        console.log(requires);
+        if(debug) {
+            console.log('find requires [%s]\r', requires);
+        }
+
         var curDepends = analyzePath(base||__dirname, path.dirname(target) ,requires);
 
         // analyze depends of current file
@@ -33,7 +41,15 @@ var ModuleComplier = function() {
             caches = caches.concat(analyzeDepends(curDepends[idx], base));
         }
 
+        if(debug) {
+            console.log('after find depends,result:[%s]\r', caches);
+        }
+
         caches = caches.concat(curDepends);
+
+        if(debug) {
+            console.log('end analyze %s\r', target);
+        }
 
         return caches;
     };
@@ -84,13 +100,15 @@ var ModuleComplier = function() {
      * @param target
      * @param base
      */
-    var buildOnce = function(target, base) {
+    var buildOnce = function(target, base, debugging) {
+        if(debugging) {
+            debug = debugging;
+        }
         var caches = analyzeDepends(target, base);
-
         caches = noDuplicate(caches);
-
-//        comboFiles(caches);
         console.log(caches.length);
+//        comboFiles(caches);
+
     };
 
     function noDuplicate(ar){
@@ -112,10 +130,10 @@ var ModuleComplier = function() {
             if(fs.statSync(target).isDirectory()) {
                 var targets = fs.readdirSync(target);
                 for (var idx in targets) {
-                    buildOnce(targets[idx], cfg.base||__dirname);
+                    buildOnce(targets[idx], cfg.base||__dirname, cfg.debug);
                 }
             } else {
-                buildOnce(target, cfg.base||__dirname);
+                buildOnce(target, cfg.base||__dirname, cfg.debug);
             }
 
         }
@@ -124,7 +142,8 @@ var ModuleComplier = function() {
 
 ModuleComplier.build({
     target:'/tc/cart/cart.js',
-    base:''
+    base:'',
+    debug: true
 });
 
 exports = ModuleComplier;
