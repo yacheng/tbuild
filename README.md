@@ -33,13 +33,13 @@ or
 
 * cfg:{Object} 参数
 
-    * base：需要打包的根目录
+    * base：需要打包的根目录，可以使用相对路径
     * target：基于根目录的入口目录
     * inputEncoding：输入文件编码，可选
     * outputEncoding：输出文件编码，可选
-    * output：输出目录
+    * output：输出目录，可以使用相对路径
 
 ### SmartCombo
 
 ## License
-tbulid 遵守 "MIT":https://github.com/czy88840616/tbuild/blob/master/LICENSE 协议
+tbulid 遵守 "MIT"：https://github.com/czy88840616/tbuild/blob/master/LICENSE.md 协议
