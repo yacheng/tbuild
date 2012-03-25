@@ -9,7 +9,33 @@
 * KISSY ModuleComplier
 * SmartCombo
 
-## ModuleComplier
+### ModuleComplier
+
+*Example:*
+
+    var ModuleComplier = require('tbuild').ModuleComplier;
+
+    ModuleComplier.build({
+        target:'/tc/cart',
+        base:'D:\\project\\tradeface\\assets\\4.0',
+        inputEncoding:'gbk',
+        outputEncoding:'gbk',
+        output:'D:\\project\\tradeface\\assets\\120324'
+    });
+
+*API:*
+
+    ModuleComplier.build(options);
+
+options:
+
+* base：需要打包的根目录
+* target：基于根目录的入口目录
+* inputEncoding：输入文件编码
+* outputEncoding：输出文件编码
+* output：输出目录
+
+### SmartCombo
 
 ## License
 tbulid 遵守 "MIT":https://github.com/czy88840616/tbuild/blob/master/LICENSE.md 协议
