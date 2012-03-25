@@ -1,29 +1,33 @@
 {
-    "name": "tbuild",
-    "version": "0.1",
-    "description": "build tools set",
-    "author": "Harry <czy88840616@gmail.com>",
+    "name":"tbuild",
+    "version":"0.1.0",
+    "description":"build tools set",
+    "author":"Harry <czy88840616@gmail.com>",
     "homepage":"",
-    "bugs": {
-        "url" : "https://github.com/czy88840616/tbuild/issues"
-    },    
-    "contributors": [],
-    "engines": {
-        "node" : ">=0.4.0"
+    "keywords":[
+        "kissy",
+        "build"
+    ],
+    "bugs":{
+        "url":"https://github.com/czy88840616/tbuild/issues"
     },
-    "directories": {
-        "lib" : "./lib/"
+    "contributors":[],
+    "engines":{
+        "node":">=0.4.0"
     },
-    "main": "./lib/base.js",
-    "dependencies": {},
+    "directories":{
+        "lib":"./lib/"
+    },
+    "main":"./lib/base.js",
+    "dependencies":{},
     "licenses":[
         {
-            "type" : "MIT",
-            "url" : "https://github.com/kissyteam/kissy/blob/master/LICENSE.md"
+            "type":"MIT",
+            "url":"https://github.com/czy88840616/tbuild/blob/master/LICENSE"
         }
     ],
-    "repository": {
+    "repository":{
         "type":"git",
-        "url":"http://github.com/kissyteam/git@github.com:kissyteam/nodejs-kissy.git"
+        "url":"git://github.com/czy88840616/tbuild.git"
     }
 }

@@ -42,4 +42,4 @@ or
 ### SmartCombo
 
 ## License
-tbulid 遵守 "MIT":https://github.com/czy88840616/tbuild/blob/master/LICENSE.md 协议
+tbulid 遵守 "MIT":https://github.com/czy88840616/tbuild/blob/master/LICENSE 协议
