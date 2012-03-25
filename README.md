@@ -5,6 +5,10 @@
 ## 安装
     npm install tbuild
 
+or
+
+    git clone git://github.com/czy88840616/tbuild.git
+
 ## 包含的工具有
 * KISSY ModuleComplier
 * SmartCombo
@@ -25,15 +29,15 @@
 
 *API:*
 
-    ModuleComplier.build(options);
+    ModuleComplier.build(cfg);
 
-options:
+* cfg:{Object} 参数
 
-* base：需要打包的根目录
-* target：基于根目录的入口目录
-* inputEncoding：输入文件编码
-* outputEncoding：输出文件编码
-* output：输出目录
+    * base：需要打包的根目录
+    * target：基于根目录的入口目录
+    * inputEncoding：输入文件编码，可选
+    * outputEncoding：输出文件编码，可选
+    * output：输出目录
 
 ### SmartCombo
 
