@@ -38,6 +38,7 @@ or
     * inputEncoding：输入文件编码，可选
     * outputEncoding：输出文件编码，可选
     * output：输出目录，可以使用相对路径
+    * exclude：{Array} 黑名单正则数组，可选，默认不处理[/.combine.js/, /-min.js/]
 
 ### SmartCombo
 
