@@ -1,7 +1,7 @@
 *.iml
 .idea/
-.ipr
-.iws
+*.ipr
+*.iws
 *~
 ~*
 *.diff
