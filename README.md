@@ -10,11 +10,10 @@ or
     git clone git://github.com/czy88840616/tbuild.git
 
 ## 包含的工具有
-* KISSY ModuleComplier
-* SmartCombo
+* ModuleComplier：KISSY ModuleComplier的nodejs版本
+* EasyCombo：一个简单的合并文件工具
 
 ### ModuleComplier
-KISSY ModuleComplier的nodejs版本
 
 *Example:*
 
@@ -42,7 +41,6 @@ KISSY ModuleComplier的nodejs版本
     * exclude：{Array} 黑名单正则数组，可选，默认不处理[/.combine.js/, /-min.js/]
 
 ### EasyCombo
-一个简单的合并文件工具
 
 *Example:*
 
