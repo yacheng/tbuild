@@ -6,5 +6,5 @@ ModuleComplier.build({
     debug: false,
     inputEncoding:'gbk',
     outputEncoding:'gbk',
-    output:'D:\\project\\tradeface\\assets\\120324'
+    output:'D:\\project\\tradeface\\assets\\testbuild'
 });

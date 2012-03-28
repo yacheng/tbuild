@@ -14,6 +14,7 @@ or
 * SmartCombo
 
 ### ModuleComplier
+KISSY ModuleComplier的nodejs版本
 
 *Example:*
 
@@ -33,14 +34,43 @@ or
 
 * cfg:{Object} 参数
 
-    * base：需要打包的根目录，可以使用相对路径
-    * target：基于根目录的入口目录
-    * inputEncoding：输入文件编码，可选
-    * outputEncoding：输出文件编码，可选
-    * output：输出目录，可以使用相对路径
+    * base：{String} 需要打包的根目录，可以使用相对路径
+    * target：{String} 基于根目录的入口目录
+    * inputEncoding：{String} 输入文件编码，可选，默认GBK
+    * outputEncoding：{String} 输出文件编码，可选，默认GBK
+    * output：{String} 输出目录，可以使用相对路径
     * exclude：{Array} 黑名单正则数组，可选，默认不处理[/.combine.js/, /-min.js/]
 
-### SmartCombo
+### EasyCombo
+一个简单的合并文件工具
+
+*Example:*
+
+    var EasyCombo = require('tbuild').EasyCombo;
+
+    EasyCombo.build({
+        base:'D:\\project\\tradeface\\assets\\4.0',
+        outputBase:'D:\\project\\tradeface\\assets\\testbuild',
+        output:'tc/cart/cart.combine.css',
+        includes:[
+            'tc/cart/cart.css',
+            'tc/cart/order.css',
+            'tc/cart/item.css'
+        ]
+    });
+
+*API:*
+
+    EasyComplier.build(cfg);
+
+* cfg:{Object} 参数
+
+    * base：{String} 需要打包的根目录，可以使用相对路径
+    * outputBase：{String} 输出目录，可选，如果不填，那么output将以base作为根目录
+    * output：{String} 输出文件，相对路径
+    * includes: {Array} 基于base的等待打包文件列表
+    * inputEncoding：{String} 输入文件编码，可选，默认GBK
+    * outputEncoding：{String} 输出文件编码，可选，默认GBK
 
 ## License
 tbulid 遵守 "MIT"：https://github.com/czy88840616/tbuild/blob/master/LICENSE.md 协议
