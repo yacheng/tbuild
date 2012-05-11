@@ -1,4 +1,4 @@
-var EasyCombo = require('../lib/base').EasyCombo;
+﻿var EasyCombo = require('../lib/base').EasyCombo;
 
 EasyCombo.build({
     base:'D:\\project\\tradeface\\assets\\4.0',

@@ -1,4 +1,4 @@
-var ModuleComplier = require('../lib/base').ModuleComplier;
+﻿var ModuleComplier = require('../lib/base').ModuleComplier;
 
 ModuleComplier.build({
     target:'/tc/cart',
@@ -6,5 +6,5 @@ ModuleComplier.build({
     debug: false,
     inputEncoding:'gbk',
     outputEncoding:'gbk',
-    output:'D:\\project\\tradeface\\assets\\testbuild'
+    output:'D:\\testbuild'
 });

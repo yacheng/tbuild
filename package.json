@@ -1,6 +1,6 @@
 {
     "name":"tbuild",
-    "version":"0.2.0",
+    "version":"0.2.1",
     "description":"build tools set",
     "author":"Harry <czy88840616@gmail.com>",
     "homepage":"",
@@ -13,7 +13,7 @@
     },
     "contributors":[],
     "engines":{
-        "node":">=0.4.0"
+        "node":">=0.6.0"
     },
     "directories":{
         "lib":"./lib/"
